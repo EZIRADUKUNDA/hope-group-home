@@ -1,0 +1,241 @@
+/*
+ * HOPE GROUP HOME – styles
+ *
+ * This stylesheet defines the core look and feel for the HOPE GROUP HOME
+ * website. Colors are chosen to be calming and uplifting, while layouts
+ * use flexible boxes so pages adapt to different screen sizes. The hero
+ * section uses a background image with an overlay to ensure text
+ * remains legible. Components such as navigation, features and footer
+ * share consistent spacing and typography.
+ */
+
+:root {
+  /* Colour palette */
+  --primary: #276678;     /* deep teal for headers and footer */
+  --secondary: #91C483;   /* soft green accent */
+  --accent: #F5B971;      /* warm golden accent used for buttons */
+  --background: #FAF9F6;  /* light neutral background */
+  --text: #333333;        /* dark text for readability */
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--primary);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Gallery grid styling */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Blog post styling */
+.post {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.post h3 {
+  margin-top: 0;
+  color: var(--primary);
+}
+
+.post-date {
+  font-size: 0.9rem;
+  color: #666666;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Hero section styles */
+.hero {
+  background: url('images/hero.jpg') no-repeat center center/cover;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+}
+
+/* Dark overlay on hero for contrast */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 0;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  z-index: 1;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  max-width: 800px;
+  z-index: 1;
+}
+
+button, .hero a button {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--accent);
+  border: none;
+  color: #ffffff;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+  z-index: 1;
+  transition: background-color 0.3s ease;
+}
+
+button:hover, .hero a button:hover {
+  background-color: var(--secondary);
+}
+
+.container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Feature grid */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.feature {
+  flex: 1 1 250px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feature h3 {
+  margin-top: 0;
+  color: var(--primary);
+}
+
+.feature p {
+  margin-bottom: 0;
+}
+
+/* Lists in about page */
+main ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+main li {
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  background-color: var(--primary);
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+/* Contact form styles */
+form {
+  max-width: 600px;
+  margin-top: 1rem;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+form label {
+  font-weight: bold;
+}
+
+form button {
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2.25rem;
+  }
+  .hero p {
+    font-size: 1.2rem;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .feature {
+    flex: 1 1 100%;
+  }
+}
