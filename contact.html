@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact – HOPE GROUP HOME</title>
-  <meta name="description" content="Contact HOPE GROUP HOME in Los Angeles for compassionate residential care inquiries.">
-  <meta name="keywords" content="contact HOPE GROUP HOME, group home, residential care, Los Angeles">
-  <meta property="og:title" content="Contact HOPE GROUP HOME">
-  <meta property="og:description" content="Reach out to us to learn more about our residential care services and supportive living community.">
+  <!-- SEO and social sharing metadata -->
+  <meta name="description" content="Contact HOPE GROUP HOME in Los Angeles for compassionate residential care inquiries and information.">
+  <meta name="keywords" content="contact HOPE GROUP HOME, group home contact, residential care inquiries, Los Angeles">
+  <meta property="og:title" content="Contact – HOPE GROUP HOME">
+  <meta property="og:description" content="Get in touch with HOPE GROUP HOME to learn more about our residential care services and supportive living community.">
   <meta property="og:image" content="https://eziradukunda.github.io/hope-group-home/images/hero.jpg">
   <meta property="og:url" content="https://eziradukunda.github.io/hope-group-home/contact.html">
   <meta name="twitter:card" content="summary_large_image">
@@ -36,7 +37,7 @@
     <!-- Hidden fields to configure Formsubmit -->
     <input type="hidden" name="_subject" value="New message from HOPE GROUP HOME website">
     <input type="hidden" name="_captcha" value="false">
-
+    
     <label for="name">Your Name:</label><br>
     <input type="text" id="name" name="name" required><br><br>
     <label for="email">Your Email:</label><br>
@@ -46,21 +47,26 @@
     <button type="submit">Send Message</button>
   </form>
 
-  <!-- Newsletter sign-up -->
-  <section>
-    <h3>Join Our Newsletter</h3>
-    <p>Subscribe to receive updates and news from HOPE GROUP HOME.</p>
-    <form action="https://formsubmit.co/eziradukunda@gmail.com" method="POST">
-      <input type="hidden" name="_subject" value="New newsletter subscription">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="email" name="email" placeholder="Your email address" required>
-      <button type="submit">Subscribe</button>
-    </form>
-  </section>
-</main>
+    <!-- Newsletter sign-up section -->
+    <section id="newsletter">
+      <h3>Subscribe to Our Newsletter</h3>
+      <p>Stay updated with the latest news and events at HOPE GROUP HOME. Enter your email below to join our newsletter.</p>
+      <form action="https://formsubmit.co/eziradukunda@gmail.com" method="POST">
+        <!-- Hidden fields to configure newsletter Formsubmit -->
+        <input type="hidden" name="_subject" value="New newsletter subscription from HOPE GROUP HOME website">
+        <input type="hidden" name="_captcha" value="false">
+        <label for="subscribe-email">Your Email:</label><br>
+        <input type="email" id="subscribe-email" name="email" required><br><br>
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+  </main>
 
-<footer>
-  <p>&copy; 2026 HOPE GROUP HOME</p>
-</footer>
+  <footer>
+    <p>&copy; 2026 HOPE GROUP HOME</p>
+  </footer>
+
+  <!-- AI Chatbot widget placeholder -->
+  <div id="chatbot"></div>
 </body>
 </html>
